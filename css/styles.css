@@ -39,7 +39,9 @@ body{
     font-size: 2rem;
     font-weight: bold;
     padding: 1rem;
+    transition: background-color .15s, color .15s;
 }
 .nav-principal a:hover{
     background-color: var(--primario);
+    color: var(--oscuro);
 }
