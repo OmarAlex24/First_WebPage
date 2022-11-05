@@ -15,7 +15,7 @@ body{
 }
 .titulo{
     text-align: center;
-    color: var(--primario);
+    color: var(--oscuro);
     font-size: var(--fuente-principal);
     font-weight: 600;
 }
@@ -23,7 +23,7 @@ body{
     font-size: 2rem;
 }
 .contenedor{
-    width: 120rem;
+    max-width: 120rem;
     margin: 0 auto;
 }
 .nav-bg{
@@ -31,9 +31,17 @@ body{
 }
 .nav-principal{
     display: flex;
-    justify-content: space-around;
+    flex-direction: column;
+}
+@media (min-width: 768px){
+    .nav-principal{
+        flex-direction:row;
+        justify-content: space-around;
+    }
 }
 .nav-principal a{
+    display: block;
+    text-align: center;
     color: var(--blanco);
     text-decoration: none;
     font-size: 2rem;
