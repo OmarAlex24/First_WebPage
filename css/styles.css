@@ -22,6 +22,7 @@ html {
 body {
     font-size: 1.6rem;
     font-family: 'Raleway', sans-serif;
+    background-image: linear-gradient(to top, #dfe9f3 0%, var(--blanco) 100%);
 }
 
 h1 {
@@ -36,6 +37,10 @@ h3 {
     font-size: 1.8rem;
 }
 
+.proyectos h3 {
+    color: var(--secundario);
+}
+
 h1,
 h2,
 h3 {
@@ -47,14 +52,37 @@ h3 {
 }
 
 .contenedor {
-    max-width: 120rem;
+    max-width: 100rem;
     margin: 0 auto;
 }
 
-.boton-principal {}
-
-.nav-bg {
+.boton-principal {
+    padding: 1rem 3rem;
+    border-radius: 3px;
     background-color: var(--secundario);
+    text-decoration: none;
+    color: var(--blanco);
+    font-weight: bold;
+    font-size: 1.8rem;
+    border: none;
+    text-transform: uppercase;
+    margin-top: 1rem;
+    width: 90%;
+    text-align: center;
+}
+
+.container-main {
+    background-color: var(--blanco);
+}
+
+.container-main>h2 {
+    font-weight: bold;
+}
+
+.centrar-main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .nav-principal {
@@ -67,7 +95,64 @@ h3 {
         flex-direction: row;
         justify-content: space-around;
     }
+
+    .boton-principal {
+        width: auto;
+    }
+
+    .container-main {
+        width: 80%;
+    }
+
+    .proyectos-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .proyectos {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .icons {
+        background-color: var(--primario);
+        padding: 4rem;
+        border-radius: 60px;
+    }
+
+    .double-icons {
+        background-color: var(--primario);
+        padding: 4rem 2rem;
+        border-radius: 58px;
+    }
+
+    .container-main {
+        box-shadow: 0 0 8px 3px rgba(0, 0, 0, .3);
+        margin-top: 2.5rem;
+    }
+
 }
+
+@media (min-width: 1024px) {
+    .container-main {
+        width: 70%;
+    }
+}
+
+.proyectos p {
+    text-align: center;
+    padding: 1rem;
+}
+
+.nav-bg {
+    background-color: var(--secundario);
+}
+
+
+
+@media (min-width: 768px) {}
 
 .nav-principal a {
     display: block;
@@ -104,7 +189,6 @@ h3 {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 3rem;
 }
 
 .contenido-hero h2,
@@ -113,7 +197,12 @@ h3 {
     margin: 0;
 }
 
-.ubicacion {
+.centrar-dos-elementos {
     display: flex;
     align-items: flex-end;
+    margin: 2.5rem 0;
+}
+
+.double-icons {
+    margin: 0;
 }
